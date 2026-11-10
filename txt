@@ -1,0 +1,160 @@
+// #include <stdio.h>: inclui a biblioteca necessária para utilizar printf.
+// void mostrarVetor(int vetor[], int tamanho): cria uma função chamada mostrarVetor.
+// Ela recebe um vetor de números inteiros e a quantidade de elementos.
+
+// int i: cria uma variável para percorrer o vetor.
+
+// for (i = 0; i < tamanho; i++): percorre todas as posições do vetor.
+// i = 0: começa na primeira posição.
+// i < tamanho: continua enquanto i for menor que o tamanho do vetor.
+// i++: aumenta i em 1 a cada repetição.
+
+// printf("%d ", vetor[i]): mostra o número inteiro que está na posição i.
+// %d: representa um número inteiro.
+// vetor[i]: acessa o elemento na posição indicada por i.
+
+// printf("\n"): pula uma linha.
+
+// --------------------------------------------------
+// ORDENAÇÃO BOLHA (BUBBLE SORT)
+// --------------------------------------------------
+
+// void ordenarBolha(int vetor[], int tamanho): cria uma função chamada ordenarBolha.
+// Ela recebe o vetor e seu tamanho para realizar a ordenação.
+
+// int i, j, temp: cria três variáveis inteiras.
+// i: controla as passagens.
+// j: percorre o vetor.
+// temp: guarda temporariamente um número durante uma troca.
+
+// int houveTroca: cria uma variável que informa se aconteceu alguma troca.
+
+// for (i = 0; i < tamanho - 1; i++): controla as passagens da ordenação.
+// i = 0: começa na primeira passagem.
+// i < tamanho - 1: limita a quantidade de passagens.
+// i++: avança para a próxima passagem.
+
+// houveTroca = 0: indica que inicialmente nenhuma troca aconteceu.
+
+// for (j = 0; j < tamanho - 1 - i; j++): percorre o vetor comparando os números vizinhos.
+// j = 0: começa na primeira posição.
+// j < tamanho - 1 - i: percorre as posições que ainda precisam ser verificadas.
+// j++: avança uma posição.
+
+// if (vetor[j] > vetor[j + 1]): verifica se o número atual é maior que o próximo.
+// Se for maior, os números precisam trocar de posição.
+
+// temp = vetor[j]: guarda o número atual temporariamente.
+
+// vetor[j] = vetor[j + 1]: coloca o próximo número na posição atual.
+
+// vetor[j + 1] = temp: coloca o número guardado em temp na posição seguinte.
+
+// houveTroca = 1: informa que aconteceu uma troca.
+
+// if (houveTroca == 0): verifica se nenhuma troca aconteceu durante a passagem.
+
+// break: interrompe a repetição porque o vetor já está ordenado.
+
+// --------------------------------------------------
+// ORDENAÇÃO POR SELEÇÃO (SELECTION SORT)
+// --------------------------------------------------
+
+// void ordenarSelecao(int vetor[], int tamanho): cria uma função chamada ordenarSelecao.
+// Ela recebe o vetor e seu tamanho para realizar a ordenação.
+
+// int i, j, menor, temp: cria as variáveis utilizadas na ordenação.
+// i: controla a posição atual.
+// j: percorre as posições seguintes.
+// menor: guarda o índice do menor número encontrado.
+// temp: guarda temporariamente um número durante a troca.
+
+// for (i = 0; i < tamanho - 1; i++): percorre as posições do vetor.
+// i = 0: começa na primeira posição.
+// i < tamanho - 1: controla as passagens.
+// i++: avança para a próxima posição.
+
+// menor = i: considera inicialmente que a posição atual possui o menor número.
+
+// for (j = i + 1; j < tamanho; j++): começa a procurar o menor número nas posições seguintes.
+
+// j = i + 1: começa a comparação na posição seguinte à atual.
+
+// j < tamanho: continua enquanto existirem posições para verificar.
+
+// j++: avança para a próxima posição.
+
+// if (vetor[j] < vetor[menor]): compara o número atual com o menor encontrado até agora.
+
+// menor = j: atualiza a posição do menor número encontrado.
+
+// temp = vetor[i]: guarda o número da posição atual.
+
+// vetor[i] = vetor[menor]: coloca o menor número na posição atual.
+
+// vetor[menor] = temp: coloca o número guardado na posição onde estava o menor.
+
+// --------------------------------------------------
+// ORDENAÇÃO POR INSERÇÃO (INSERTION SORT)
+// --------------------------------------------------
+
+// void ordenarInsercao(int vetor[], int tamanho): cria uma função chamada ordenarInsercao.
+// Ela recebe o vetor e seu tamanho para realizar a ordenação.
+
+// int i, j, chave: cria as variáveis utilizadas na ordenação.
+// i: percorre o vetor.
+// j: percorre as posições anteriores.
+// chave: guarda o número que será inserido na posição correta.
+
+// for (i = 1; i < tamanho; i++): começa na segunda posição do vetor.
+// O primeiro elemento já é considerado ordenado.
+
+// chave = vetor[i]: guarda o número atual para inseri-lo na posição correta.
+
+// j = i - 1: começa a comparação pela posição anterior à chave.
+
+// while (j >= 0 && vetor[j] > chave): verifica se ainda existem posições anteriores
+// e se o número encontrado é maior que a chave.
+// j >= 0: verifica se não ultrapassamos o início do vetor.
+// vetor[j] > chave: verifica se o número anterior é maior que a chave.
+// &&: significa E, ou seja, as duas condições precisam ser verdadeiras.
+
+// vetor[j + 1] = vetor[j]: desloca o número maior uma posição para a direita.
+
+// j--: volta uma posição para continuar procurando o lugar correto.
+
+// vetor[j + 1] = chave: coloca a chave na posição correta.
+
+// --------------------------------------------------
+// FUNÇÃO PRINCIPAL (MAIN)
+// --------------------------------------------------
+
+// int main(): é a função principal, onde a execução do programa começa.
+
+// int vetor1[] = {5, 3, 8, 1, 2}: cria o primeiro vetor para o Bubble Sort.
+
+// int vetor2[] = {5, 3, 8, 1, 2}: cria o segundo vetor para o Selection Sort.
+
+// int vetor3[] = {5, 3, 8, 1, 2}: cria o terceiro vetor para o Insertion Sort.
+
+// int tamanho = 5: informa que os vetores possuem cinco elementos.
+
+// printf("Vetor original: "): mostra uma mensagem na tela.
+
+// mostrarVetor(vetor1, tamanho): chama a função para mostrar os números do vetor.
+
+// ordenarBolha(vetor1, tamanho): chama a função que organiza o primeiro vetor usando Bubble Sort.
+
+// printf("\nOrdenacao Bolha: "): mostra o nome do método na tela.
+
+// mostrarVetor(vetor1, tamanho): mostra o vetor depois da ordenação.
+
+// ordenarSelecao(vetor2, tamanho): chama a função Selection Sort.
+
+// mostrarVetor(vetor2, tamanho): mostra o vetor depois da ordenação.
+
+// ordenarInsercao(vetor3, tamanho): chama a função Insertion Sort.
+
+// mostrarVetor(vetor3, tamanho): mostra o vetor depois da ordenação.
+
+// return 0: indica que o programa terminou corretamente.
